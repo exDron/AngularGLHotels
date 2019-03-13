@@ -1,18 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
-import Profile from '../models/Profile';
+import { Component, Input } from '@angular/core';
+import { IProfile } from '../models/Profile';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent {
 
-  @Input() hotelProfile: Profile;
-  
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  @Input() public hotelProfile: IProfile;
 }

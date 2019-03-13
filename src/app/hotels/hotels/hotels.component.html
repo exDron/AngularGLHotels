@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="element">
   <div class="element-left">
-    <div class="element-bg-img"><img src="{{ selectedHotel.picture }}" alt="" class="img-responsive"> </div>
+    <div class="element-bg-img"><img [src]="selectedHotel.picture" alt="" class="img-responsive"> </div>
     <div class="element-left-bottom">
       <app-nav></app-nav>
       <div class="village">
@@ -9,15 +9,15 @@
         <span class="line"> </span>
         <div class="activity_box">
           <div class="scrollbar" id="style-2">
-            <app-list (selectedHotel)='selectHotel($event)' [hotelsList]='hotels'></app-list>
+            <app-list (selectedHotel)="selectHotel($event)" [hotelsList]="hotels"></app-list>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="element-right">
-    <app-weather [hotelWeather]='selectedHotel.weather'></app-weather>
-    <app-profile [hotelProfile]='selectedHotel.profile'></app-profile>
+    <app-weather [hotelWeather]="selectedHotel.weather"></app-weather>
+    <app-profile [hotelProfile]="selectedHotel.profile"></app-profile>
   </div>
   <div class="clear"> </div>
 </div>

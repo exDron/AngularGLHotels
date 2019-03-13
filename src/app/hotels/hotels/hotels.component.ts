@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Hotel from '../models/Hotel';
+import  { IHotel } from '../models/Hotel';
 
 @Component({
   selector: 'app-hotels',
@@ -8,7 +8,7 @@ import Hotel from '../models/Hotel';
 })
 export class HotelsComponent implements OnInit {
 
-  public hotels: Hotel[] = [
+  public hotels: IHotel[] = [
     {
       id: 0,
       title: 'Universal Cabana',
@@ -80,16 +80,14 @@ export class HotelsComponent implements OnInit {
     }
   ];
 
-  public selectedHotel: Hotel;
-  
-  constructor() { }
+  public selectedHotel: IHotel;
 
-  ngOnInit() {
+  public ngOnInit(): void {
     this.selectedHotel = this.hotels[0];
   }
 
-  selectHotel(selectedHostelId: number) {
-      let selectedHotel: Hotel = this.hotels.filter((hostel: Hotel) => {
+  public selectHotel(selectedHostelId: number): void {
+      const selectedHotel: IHotel = this.hotels.filter((hostel: IHotel) => {
         return hostel.id === selectedHostelId;
       })[0];
 

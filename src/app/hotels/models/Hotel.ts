@@ -1,15 +1,15 @@
-import Weather from './Weather';
-import Profile from './Profile';
+import { IWeather } from './Weather';
+import { IProfile } from './Profile';
 
-export default class Hotel {
-    public id: number;
-    public title: string;
-    public address: string;
-    public description: string;
-    public phone: string;
-    public picture: string;
-    public photos: string[];
-    public weather: Weather;
-    public profile: Profile;
-    public stars: number;
+export interface IHotel {
+  id: number;
+  title: string;
+  address: string;
+  description: string;
+  phone: string;
+  picture: string;
+  photos: string[];
+  weather: IWeather;
+  profile: IProfile;
+  stars: number;
 }

@@ -1,22 +1,17 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import Hotel from '../models/Hotel';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { IHotel } from '../models/Hotel';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
 
-  @Input() hotelsList: Hotel[];
-  @Output() selectedHotel = new EventEmitter<number>();
-  
-  constructor() { }
+  @Input() public hotelsList: IHotel[];
+  @Output() public selectedHotel: EventEmitter < number > = new EventEmitter < number > ();
 
-  ngOnInit() {
-  }
-
-  selectHotel(selectedHotelId: number) {
+  public selectHotel(selectedHotelId: number): void {
     this.selectedHotel.emit(selectedHotelId);
   }
 

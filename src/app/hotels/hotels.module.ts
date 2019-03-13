@@ -9,7 +9,15 @@ import { HotelsComponent } from './hotels/hotels.component';
 import { NavComponent } from './nav/nav.component';
 
 @NgModule({
-  declarations: [ListComponent, WeatherComponent, ProfileComponent, HeaderComponent, FooterComponent, HotelsComponent, NavComponent],
+  declarations: [
+    ListComponent,
+    WeatherComponent,
+    ProfileComponent,
+    HeaderComponent,
+    FooterComponent,
+    HotelsComponent,
+    NavComponent
+  ],
   imports: [
     CommonModule
   ],
