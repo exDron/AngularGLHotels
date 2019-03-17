@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { NavComponent } from './nav/nav.component';
+import { HotelFilterPipe } from './pipes/hotel-filter-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavComponent } from './nav/nav.component';
     HeaderComponent,
     FooterComponent,
     HotelsComponent,
-    NavComponent
+    NavComponent,
+    HotelFilterPipe
   ],
   imports: [
     CommonModule

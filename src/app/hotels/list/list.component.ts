@@ -9,6 +9,7 @@ import { IHotel } from '../models/Hotel';
 export class ListComponent {
 
   @Input() public hotelsList: IHotel[];
+  @Input() public searchHotel: string = 'kh';
   @Output() public selectedHotel: EventEmitter < number > = new EventEmitter < number > ();
 
   public selectHotel(selectedHotelId: number): void {

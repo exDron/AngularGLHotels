@@ -82,6 +82,8 @@ export class HotelsComponent implements OnInit {
 
   public selectedHotel: IHotel;
 
+  public searchHotel: string;
+
   public ngOnInit(): void {
     this.selectedHotel = this.hotels[0];
   }
@@ -92,6 +94,10 @@ export class HotelsComponent implements OnInit {
       })[0];
 
       this.selectedHotel = selectedHotel;
+  }
+
+  public searchChanged(event: KeyboardEvent): void {
+    this.searchHotel = (event.target as HTMLInputElement).value;
   }
 
 }
