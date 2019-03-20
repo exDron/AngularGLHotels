@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import  { IHotel } from '../models/Hotel';
 
 @Component({
@@ -84,6 +84,11 @@ export class HotelsComponent implements OnInit {
 
   public searchHotel: string;
 
+  public stars: number[];
+
+  public constructor(private cd: ChangeDetectorRef) {
+  }
+
   public ngOnInit(): void {
     this.selectedHotel = this.hotels[0];
   }
@@ -100,4 +105,7 @@ export class HotelsComponent implements OnInit {
     this.searchHotel = (event.target as HTMLInputElement).value;
   }
 
+  public starsChanged(event: number[]): void {
+    this.stars = event.slice(0);
+  }
 }

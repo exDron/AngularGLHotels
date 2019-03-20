@@ -1,8 +1,8 @@
 <div class="ele-strip">
     <ul>
-      <li><a href="#">Hotel</a></li>
-      <li><a href="#">Fishing</a></li>
-      <li><a href="#">Tours</a></li>
-      <li class="anc-bor"><a href="#">Weather</a></li>
+      <li><a [ngClass]="{'star-active': rating.length === 0}" href="#" (click)="filterRating(0)">All</a></li>
+      <li><a [ngClass]="{'star-active': rating.includes(3)}" href="#" (click)="filterRating(3)">***</a></li>
+      <li><a [ngClass]="{'star-active': rating.includes(4)}"  href="#" (click)="filterRating(4)">****</a></li>
+      <li><a [ngClass]="{'star-active': rating.includes(5)}" href="#" (click)="filterRating(5)">*****</a></li>
     </ul>
   </div>

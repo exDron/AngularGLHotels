@@ -1,4 +1,4 @@
-<div class="activity-row"  (click)="selectHotel(hotel.id)" *ngFor="let hotel of hotelsList | hotelFilterPipe: searchHotel" [ngClass]="{'active-hotel': (selectedHotel === hotel.id)}">
+<div class="activity-row"  (click)="selectHotel(hotel.id)" *ngFor="let hotel of hotelsList | hotelFilterPipe: searchHotel: stars" [ngClass]="{'active-hotel': (selectedHotel === hotel.id)}">
   <div class="activity-desc">
     <h5>{{ hotel.title }}</h5>
     <p>{{ hotel.description }}</p>

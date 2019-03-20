@@ -3,7 +3,7 @@
   <div class="element-left">
     <div class="element-bg-img"><img [src]="selectedHotel.picture" alt="" class="img-responsive"> </div>
     <div class="element-left-bottom">
-      <app-nav></app-nav>
+      <app-nav (stars)="starsChanged($event)"></app-nav>
       <div class="village">
         <div class="search-block">
             <p>Search Hotel:</p>
@@ -13,7 +13,7 @@
         <span class="line"> </span>
         <div class="activity_box">
           <div class="scrollbar" id="style-2">
-            <app-list (selectedHotel)="selectHotel($event)" [searchHotel]="searchHotel" [hotelsList]="hotels"></app-list>
+            <app-list (selectedHotel)="selectHotel($event)" [stars]="stars" [searchHotel]="searchHotel" [hotelsList]="hotels"></app-list>
           </div>
         </div>
       </div>
