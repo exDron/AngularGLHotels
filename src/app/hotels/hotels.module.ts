@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { NavComponent } from './nav/nav.component';
 import { HotelFilterPipe } from './pipes/hotel-filter-pipe.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HotelFilterPipe } from './pipes/hotel-filter-pipe.pipe';
     HotelFilterPipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [HotelsComponent]
 })
